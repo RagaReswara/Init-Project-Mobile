@@ -14,19 +14,33 @@
         android:theme="@style/Theme.AndroidActivity"
         tools:targetApi="31">
         <activity
-            android:name=".HelpActivity"
-            android:exported="false"
-            android:label="Help Activity"/>
-        <activity
-            android:name=".MainActivity"
+            android:name=".DutataniActivity"
             android:exported="true"
-            android:label="Main Activity">
+            android:label="@string/title_activity_dutatani" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ProteinTrackerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false"
+            android:label="Help Activity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Main Activity"/>
     </application>
 
 </manifest>

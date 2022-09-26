@@ -3,4 +3,8 @@
     <string name="text_progmob_main">PemrogMobile</string>
     <string name="button">Button</string>
     <string name="halo_progmob">Halo ProgMob</string>
+    <string name="title_activity_dutatani">DutataniActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_profile">Profile</string>
 </resources>
