@@ -14,16 +14,25 @@
         android:theme="@style/Theme.AndroidActivity"
         tools:targetApi="31">
         <activity
-            android:name=".DutataniActivity"
+            android:name=".EditData"
+            android:exported="false" />
+        <activity
+            android:name=".SampleListView"
+            android:exported="false" />
+        <activity
+            android:name=".SampleList"
             android:exported="true"
-            android:label="@string/title_activity_dutatani" >
+            android:label="SampleList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".DutataniActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dutatani" />
         <activity
             android:name=".ProteinTrackerActivity"
             android:exported="false" />
@@ -40,7 +49,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Main Activity"/>
+            android:label="Main Activity" />
     </application>
 
 </manifest>
