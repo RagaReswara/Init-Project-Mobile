@@ -14,42 +14,44 @@
         android:theme="@style/Theme.AndroidActivity"
         tools:targetApi="31">
         <activity
+            android:name=".SampleRecyclerView"
+            android:exported="true" />
+        <activity
             android:name=".EditData"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SampleListView"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SampleList"
             android:exported="true"
-            android:label="SampleList">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="SampleList"/>
         <activity
             android:name=".DutataniActivity"
             android:exported="true"
             android:label="@string/title_activity_dutatani" />
         <activity
             android:name=".ProteinTrackerActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".TableActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ConstraintActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".HelpActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="Help Activity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Main Activity" />
+            android:label="Main Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

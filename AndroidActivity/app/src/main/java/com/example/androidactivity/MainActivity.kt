@@ -7,12 +7,14 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.example.androidactivity.adapter.PetaniAdapter
 
 class MainActivity : AppCompatActivity() {
     lateinit var tvMain : TextView
     lateinit var btnInputNama : Button
     lateinit var edInputNama : EditText
     lateinit var btnHelp : Button
+    lateinit var btnRecycler : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +26,18 @@ class MainActivity : AppCompatActivity() {
         btnInputNama = findViewById(R.id.btn_ambil_nama)
         btnHelp = findViewById(R.id.btn_help)
         edInputNama = findViewById(R.id.ed_input_nama)
+        btnRecycler = findViewById(R.id.btnRecycler)
 
         btnInputNama.setOnClickListener(View.OnClickListener { view ->
             var strTmp = edInputNama.text.toString()
             tvMain.text = strTmp
+        })
+
+        btnRecycler.setOnClickListener(View.OnClickListener { view ->
+            var bundle = Bundle()
+            var intent = Intent(this@MainActivity, SampleRecyclerView::class.java)
+            intent.putExtras(bundle)
+            startActivity(intent)
         })
 
         btnHelp.setOnClickListener (View.OnClickListener {
@@ -39,6 +49,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
             })
+
+
+
         }
 
     }
