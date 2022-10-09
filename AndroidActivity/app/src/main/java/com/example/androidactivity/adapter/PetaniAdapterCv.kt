@@ -1,7 +1,5 @@
 package com.example.androidactivity.adapter
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,16 +8,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidactivity.R
 import com.example.androidactivity.model.Petani
 
-class PetaniAdapterCv (val petani: List<Petani>): RecyclerView.Adapter<PetaniAdapter.PetaniHolder>() {
+class PetaniAdapterCv (val petani: List<Petani>): RecyclerView.Adapter<PetaniAdapterCv.PetaniHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): PetaniAdapter.PetaniHolder
+    ): PetaniAdapterCv.PetaniHolder
     {
         return(
-                PetaniHolderCv(LayoutInflater.from(parent.context).inflate(R.layout.rv_item_dutatani, parent, false)))
+                PetaniHolder(LayoutInflater.from(parent.context).inflate(R.layout.activity_petani_adapter_cv, parent, false)))
     }
-    override fun onBindViewHolder(holder: PetaniAdapter.PetaniHolder, position: Int)
+    override fun onBindViewHolder(holder: PetaniAdapterCv.PetaniHolder, position: Int)
     {
         holder.bindPetani(petani[position])
     }
@@ -35,11 +33,11 @@ class PetaniAdapterCv (val petani: List<Petani>): RecyclerView.Adapter<PetaniAda
         lateinit var txtTambahLahan: TextView
         fun bindPetani(petani: Petani) {
             itemView.apply {
-                txtUser = findViewById(R.id.txtUser)
-                txtNama = findViewById(R.id.txtNama)
-                txtJumlahLahan = findViewById(R.id.txtJmlLahan)
-                txtIdentifikasi = findViewById(R.id.txtIdentifikasi)
-                txtTambahLahan = findViewById(R.id.txtTmbhLahan)
+                txtUser = findViewById(R.id.txtUserCv)
+                txtNama = findViewById(R.id.txtNamaCv)
+                txtJumlahLahan = findViewById(R.id.txtJmlLahanCv)
+                txtIdentifikasi = findViewById(R.id.txtIdentifikasiCv)
+                txtTambahLahan = findViewById(R.id.txtTmbhLahanCv)
                 txtUser.text = petani.user
                 txtNama.text = petani.nama
                 txtJumlahLahan.text = petani.jumlahLahan

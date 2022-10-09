@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtUser"
+            android:id="@+id/txtUserCv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="User" />

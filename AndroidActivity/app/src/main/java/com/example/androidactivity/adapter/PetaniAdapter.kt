@@ -33,7 +33,7 @@ class PetaniAdapter (val petani: List<Petani>): RecyclerView.Adapter<PetaniAdapt
         lateinit var txtTambahLahan: TextView
         fun bindPetani(petani: Petani) {
             itemView.apply {
-                txtUser = findViewById(R.id.txtUser)
+                txtUser = findViewById(R.id.txtUserCv)
                 txtNama = findViewById(R.id.txtNama)
                 txtJumlahLahan = findViewById(R.id.txtJmlLahan)
                 txtIdentifikasi = findViewById(R.id.txtIdentifikasi)
