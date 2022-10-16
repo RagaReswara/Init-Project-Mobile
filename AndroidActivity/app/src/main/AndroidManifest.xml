@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.androidactivity">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,11 +16,26 @@
         android:theme="@style/Theme.AndroidActivity"
         tools:targetApi="31">
         <activity
-            android:name=".SampleCardView"
+            android:name=".InsertActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GetApiActivity"
             android:exported="false" />
         <activity
+            android:name=".ServiceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SampleCardView"
+            android:exported="true" />
+        <activity
             android:name=".PetaniAdapterCv"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SampleRecyclerView"
             android:exported="true" />
@@ -52,13 +69,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Main Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="Main Activity" />
     </application>
 
 </manifest>

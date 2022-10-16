@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnHelp : Button
     lateinit var btnRecycler : Button
     lateinit var btnCv : Button
+    lateinit var btnGet : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         edInputNama = findViewById(R.id.ed_input_nama)
         btnRecycler = findViewById(R.id.btnRecycler)
         btnCv = findViewById(R.id.btnCv)
+        btnGet = findViewById(R.id.btnGet)
 
         btnInputNama.setOnClickListener(View.OnClickListener { view ->
             var strTmp = edInputNama.text.toString()
@@ -49,8 +51,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
-
-
+        btnGet.setOnClickListener(View.OnClickListener { view ->
+            var bundle = Bundle()
+            var intent = Intent(this@MainActivity, ServiceActivity::class.java)
+            intent.putExtras(bundle)
+            startActivity(intent)
+        })
 
         btnHelp.setOnClickListener (View.OnClickListener {
             var bundle = Bundle()
