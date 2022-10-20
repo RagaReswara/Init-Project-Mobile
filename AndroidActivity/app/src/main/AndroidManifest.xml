@@ -16,6 +16,12 @@
         android:theme="@style/Theme.AndroidActivity"
         tools:targetApi="31">
         <activity
+            android:name=".GetMhsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateMahasiswa"
+            android:exported="false" />
+        <activity
             android:name=".InsertActivity"
             android:exported="true">
             <intent-filter>

@@ -2,12 +2,11 @@ package com.example.androidactivity.model
 
 import com.google.gson.annotations.SerializedName
 
-data class ResponseMahasiswa {
+data class ResponseMahasiswa(
 
     @field:SerializedName("ResponseMahasiswa")
     val responseMahasiswa: List<ResponseMahasiswaItem?>? = null
-
-}
+)
 
 data class ResponseMahasiswaItem(
 

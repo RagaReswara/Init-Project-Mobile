@@ -37,7 +37,8 @@ interface Users {
     fun getUsers(): Call<List<ResponseUsersItem>>
     @POST("api/progmob/mhs/create")
     fun addMahasiswa(@Body req : ResponseAddMahasiswaItem): Call<ResponseAddMahasiswa>
-
+    @GET("api/progmob/mhs/364")
+    fun getMhs(): Call<List<ResponseMahasiswaItem>>
 }
 
 

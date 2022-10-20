@@ -12,7 +12,8 @@ class HelpActivity : AppCompatActivity() {
         if(intent.extras != null){
             var bundle : Bundle ?= intent.extras
             var strTes : String = bundle?.getString("tesText").toString()
-            Snackbar.make(getWindow().getDecorView().getRootView(),strTes,
+            Snackbar.make(
+                window.decorView.rootView,strTes,
                 Snackbar.LENGTH_LONG).show()
         }
     }

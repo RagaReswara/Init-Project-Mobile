@@ -56,7 +56,7 @@ class SampleListView : AppCompatActivity() {
                 intent.putExtra("username",items.get(info.id.toInt()))
                     startActivity(intent)
             }
-            R.id.menu_delete -> {
+            R.id.delete_mhs -> {
                 Snackbar.make(lvSample,"Anda memilih: Delete Item ke-${info.id}",
                     Snackbar.LENGTH_LONG).show()
             }
